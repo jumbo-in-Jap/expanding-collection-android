@@ -157,6 +157,14 @@ public class ECPagerView extends FrameLayout implements ViewPager.OnPageChangeLi
     public void onPageScrollStateChanged(int state) {
         needsRedraw = (state != ViewPager.SCROLL_STATE_IDLE);
     }
+    
+    public void setCurrentPosition(int position){
+        pager.setCurrentPosition(position);
+    }
+    
+    public void setCurrentItem(int item){
+        pager.setCurrentItem(position);
+    }
 
     protected void toggleTopMargin(int duration, int delay) {
         final RelativeLayout.LayoutParams containerLayoutParams = (RelativeLayout.LayoutParams) this.getLayoutParams();
